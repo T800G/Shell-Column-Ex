@@ -1,4 +1,4 @@
-# Shell-Column-Ex
+# Shell Column Ex
 Display additional columns in details view
 
 ##System requirements
