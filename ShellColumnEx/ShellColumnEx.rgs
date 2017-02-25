@@ -1,0 +1,47 @@
+HKLM
+{
+	NoRemove Software
+	{
+		NoRemove Classes
+		{
+			NoRemove Folder
+			{
+				NoRemove Shellex
+				{
+					NoRemove ColumnHandlers
+					{
+						ForceRemove {1A6C6EB7-9E9E-4C68-A126-560F37F15431} = s 'ShellColumnEx Class'
+					}
+				}
+			}
+
+			NoRemove CLSID
+			{
+				ForceRemove {1A6C6EB7-9E9E-4C68-A126-560F37F15431} = s 'ShellColumnEx Class'
+				{
+					InprocServer32 = s '%MODULE%'
+					{
+						val ThreadingModel = s 'Apartment'
+					}
+				}
+			}
+		}
+
+		NoRemove Microsoft
+		{
+			NoRemove Windows
+			{
+				NoRemove CurrentVersion
+				{
+					NoRemove 'Shell Extensions'
+					{
+						NoRemove Approved
+						{
+							val {1A6C6EB7-9E9E-4C68-A126-560F37F15431} = s 'ShellColumnEx Class'
+						}
+					}
+				}
+			}
+		}
+	}
+}

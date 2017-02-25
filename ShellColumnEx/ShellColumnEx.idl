@@ -1,0 +1,39 @@
+// ShColEx.idl : IDL source for ShellColumnEx.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ShellColumnEx.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	
+	[
+		object,
+		uuid(5BB9DC52-0FC9-4E70-845D-1E35A59C15E0),
+		helpstring("IShellColumnEx Interface"),
+		pointer_default(unique)
+	]
+	interface IShellColumnEx : IUnknown
+	{
+	};
+
+[
+	uuid(EF864C48-3953-4FAD-AEB5-2397F1C1EE4F),
+	version(1.0),
+	helpstring("ShellColumnEx 1.0 Type Library")
+]
+library SHELLCOLUMNEXLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	
+	[
+		uuid(1A6C6EB7-9E9E-4C68-A126-560F37F15431),
+		helpstring("ShellColumnEx Class")
+	]
+	coclass ShellColumnEx
+	{
+		[default] interface IShellColumnEx;
+	};
+};
